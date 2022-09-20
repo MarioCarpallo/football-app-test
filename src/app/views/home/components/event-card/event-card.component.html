@@ -1,0 +1,12 @@
+<div class="card bg-dark text-white h-100">
+    <img [src]="eventDetail.thumbnail" (error)="handleMissingImage($event)" class="card-img-top" alt="Skyscrapers"/>
+    <div class="card-body body-css">
+      <h5 class="card-title">{{eventDetail.title}}</h5>
+      <p class="card-text">
+       Competición: {{eventDetail.competition}}
+      </p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Fecha: {{eventDetail.date | date:'dd-MM-yyyy'}}</small>
+    </div>
+  </div>

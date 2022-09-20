@@ -1,0 +1,15 @@
+<div class="container mt-4" *ngIf="selectedEvent">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="text-white text-center">{{selectedEvent.title}}</h3>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12 justify-content-center player text-center">
+            <div class="playerContainer">
+                <iframe class="videoPlayerT" [src]="videoURL" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>

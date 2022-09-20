@@ -1,0 +1,13 @@
+<div class="d-flex justify-content-center">
+    <div class="row row-cols-1 row-cols-md-3 g-4 m-4 w-75" *ngIf="eventList.length > 0 else notFoundEvents">
+        <div class="col-auto eventCard hover-shadow" *ngFor="let event of eventList" (click)="goEventDetail(event)">
+            <app-event-card [eventDetail]="event"></app-event-card>
+          </div>
+    </div>
+</div>
+
+    <ng-template #notFoundEvents>
+        <div>
+            <p>No hay eventos disponibles.</p>
+        </div>
+    </ng-template>
